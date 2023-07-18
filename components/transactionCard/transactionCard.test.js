@@ -1,6 +1,11 @@
-import { screen } from '@testing-library/react-native';
+
 import TransactionCard from './index';
-import renderer from 'react-test-renderer';
+import { render, screen } from "@testing-library/react-native";
+import renderer from "react-test-renderer";
+
+jest.mock('@expo/vector-icons', () => ({
+  Feather: '',
+}));
 
 const mockTransaction = {
     name: "Shoes",
@@ -9,7 +14,14 @@ const mockTransaction = {
     date: "Aug 12"
 }
 
-test('should render transaction component with values that have been parsed', () => {
-  const tree = renderer.create(<TransactionCard name={mockTransaction.name} cost={mockTransaction.cost} description={mockTransaction.description} date={mockTransaction.date} />).toJSON();
-  expect(tree).toMatchSnapshot()
+
+describe('<App />', () => {
+  it('renders transaction card component', async () => {
+    const tree = renderer.create(<TransactionCard name={mockTransaction.name} cost={mockTransaction.cost} description={mockTransaction.description} date={mockTransaction.date} />).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+  it('renders transaction name', async () => {
+    render(<TransactionCard name={mockTransaction.name} cost={mockTransaction.cost} description={mockTransaction.description} date={mockTransaction.date} />)
+    expect(screen.getByText(mockTransaction.name)).toBeDefined()
+  });
 });
