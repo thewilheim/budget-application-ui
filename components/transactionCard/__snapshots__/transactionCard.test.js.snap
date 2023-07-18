@@ -1,0 +1,365 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+<View
+  style={
+    [
+      {
+        "flexBasis": "0%",
+        "flexGrow": 1,
+        "flexShrink": 1,
+      },
+      {
+        "justifyContent": "space-between",
+      },
+      {
+        "alignItems": "center",
+      },
+      {
+        "width": "100%",
+      },
+      {
+        "maxHeight": 80,
+      },
+      {
+        "backgroundColor": "#fff",
+      },
+      {
+        "flexDirection": "row",
+      },
+      {
+        "borderBottomLeftRadius": 12,
+        "borderBottomRightRadius": 12,
+        "borderTopLeftRadius": 12,
+        "borderTopRightRadius": 12,
+      },
+      {
+        "shadowColor": "rgba(0, 0, 0, 0.1)",
+        "shadowOffset": {
+          "height": 1,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 2,
+      },
+      {
+        "shadowColor": "rgba(55, 65, 81, 0.4)",
+      },
+      {
+        "paddingBottom": 12,
+        "paddingLeft": 12,
+        "paddingRight": 12,
+        "paddingTop": 12,
+      },
+      {
+        "marginBottom": 4,
+        "marginTop": 4,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      [
+        {
+          "flexDirection": "row",
+        },
+        {
+          "alignItems": "center",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        [
+          {
+            "paddingBottom": 12,
+            "paddingLeft": 12,
+            "paddingRight": 12,
+            "paddingTop": 12,
+          },
+          {
+            "backgroundColor": "#fdba74",
+          },
+          {
+            "borderBottomLeftRadius": 12,
+            "borderBottomRightRadius": 12,
+            "borderTopLeftRadius": 12,
+            "borderTopRightRadius": 12,
+          },
+          {
+            "marginRight": 16,
+          },
+        ]
+      }
+    >
+      <Text />
+    </View>
+    <View>
+      <Text
+        style={
+          [
+            {
+              "marginBottom": 4,
+            },
+            {
+              "fontWeight": "700",
+            },
+          ]
+        }
+      >
+        Shoes
+      </Text>
+      <Text
+        style={
+          [
+            {
+              "fontSize": 14,
+              "lineHeight": 20,
+            },
+            {
+              "color": "#9ca3af",
+            },
+            {
+              "fontWeight": "600",
+            },
+          ]
+        }
+      >
+        Nike Shoes
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      [
+        {
+          "textAlign": "center",
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "marginBottom": 4,
+          },
+          {
+            "fontWeight": "700",
+          },
+          {
+            "color": "#f87171",
+          },
+          {
+            "textAlign": "center",
+          },
+        ]
+      }
+    >
+      -$23.00
+    </Text>
+    <Text
+      style={
+        [
+          {
+            "fontSize": 14,
+            "lineHeight": 20,
+          },
+          {
+            "color": "#9ca3af",
+          },
+          {
+            "fontWeight": "600",
+          },
+        ]
+      }
+    >
+      Aug 12
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`should render transaction component with values that have been parsed 1`] = `
+<View
+  style={
+    [
+      {
+        "flexBasis": "0%",
+        "flexGrow": 1,
+        "flexShrink": 1,
+      },
+      {
+        "justifyContent": "space-between",
+      },
+      {
+        "alignItems": "center",
+      },
+      {
+        "width": "100%",
+      },
+      {
+        "maxHeight": 80,
+      },
+      {
+        "backgroundColor": "#fff",
+      },
+      {
+        "flexDirection": "row",
+      },
+      {
+        "borderBottomLeftRadius": 12,
+        "borderBottomRightRadius": 12,
+        "borderTopLeftRadius": 12,
+        "borderTopRightRadius": 12,
+      },
+      {
+        "shadowColor": "rgba(0, 0, 0, 0.1)",
+        "shadowOffset": {
+          "height": 1,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 2,
+      },
+      {
+        "shadowColor": "rgba(55, 65, 81, 0.4)",
+      },
+      {
+        "paddingBottom": 12,
+        "paddingLeft": 12,
+        "paddingRight": 12,
+        "paddingTop": 12,
+      },
+      {
+        "marginBottom": 4,
+        "marginTop": 4,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      [
+        {
+          "flexDirection": "row",
+        },
+        {
+          "alignItems": "center",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        [
+          {
+            "paddingBottom": 12,
+            "paddingLeft": 12,
+            "paddingRight": 12,
+            "paddingTop": 12,
+          },
+          {
+            "backgroundColor": "#fdba74",
+          },
+          {
+            "borderBottomLeftRadius": 12,
+            "borderBottomRightRadius": 12,
+            "borderTopLeftRadius": 12,
+            "borderTopRightRadius": 12,
+          },
+          {
+            "marginRight": 16,
+          },
+        ]
+      }
+    >
+      <Text />
+    </View>
+    <View>
+      <Text
+        style={
+          [
+            {
+              "marginBottom": 4,
+            },
+            {
+              "fontWeight": "700",
+            },
+          ]
+        }
+      >
+        Shoes
+      </Text>
+      <Text
+        style={
+          [
+            {
+              "fontSize": 14,
+              "lineHeight": 20,
+            },
+            {
+              "color": "#9ca3af",
+            },
+            {
+              "fontWeight": "600",
+            },
+          ]
+        }
+      >
+        Nike Shoes
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      [
+        {
+          "textAlign": "center",
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "marginBottom": 4,
+          },
+          {
+            "fontWeight": "700",
+          },
+          {
+            "color": "#f87171",
+          },
+          {
+            "textAlign": "center",
+          },
+        ]
+      }
+    >
+      -$23.00
+    </Text>
+    <Text
+      style={
+        [
+          {
+            "fontSize": 14,
+            "lineHeight": 20,
+          },
+          {
+            "color": "#9ca3af",
+          },
+          {
+            "fontWeight": "600",
+          },
+        ]
+      }
+    >
+      Aug 12
+    </Text>
+  </View>
+</View>
+`;

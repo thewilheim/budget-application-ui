@@ -1,6 +1,5 @@
 import React from "react";
 import { Text, View } from "react-native";
-import "../styles.css";
 import { Feather } from '@expo/vector-icons'; 
 
 interface TransactionCardInterface {
@@ -13,7 +12,7 @@ interface TransactionCardInterface {
 export default function TransactionCard({name, description, cost, date}: TransactionCardInterface) {
 
   return (
-    <View className="flex-1 justify-between items-center w-full max-h-20 bg-white flex-row rounded-xl shadow-lg shadow-gray-700/40 p-3">
+    <View className="flex-1 justify-between items-center w-full max-h-20 bg-white flex-row rounded-xl shadow-sm shadow-gray-700/40 p-3 my-1">
       <View className="flex-row items-center">
       <View className="p-3 bg-orange-300 rounded-xl mr-4">
       <Feather name="shopping-bag" size={24} color="white" />
