@@ -180,7 +180,7 @@ exports[`<App /> renders transaction card component 1`] = `
         ]
       }
     >
-      Aug 12
+      Dec 01
     </Text>
   </View>
 </View>
