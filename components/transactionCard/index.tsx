@@ -1,6 +1,7 @@
 import React from "react";
 import { Text, View } from "react-native";
-import { Feather } from '@expo/vector-icons'; 
+import { Feather } from '@expo/vector-icons';
+import { formatDateToMonthDay } from "../../utils/dateUtils"; 
 
 interface TransactionCardInterface {
     name: string
@@ -24,7 +25,7 @@ export default function TransactionCard({name, description, cost, date}: Transac
       </View>
       <View className="text-center">
         <Text className="mb-1 font-bold text-red-400 text-center">{cost}</Text>
-        <Text className="text-sm text-gray-400 font-semibold">{date}</Text>
+        <Text className="text-sm text-gray-400 font-semibold">{formatDateToMonthDay(date)}</Text>
       </View>
     </View>
   );

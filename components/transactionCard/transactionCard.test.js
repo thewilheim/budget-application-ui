@@ -14,7 +14,6 @@ const mockTransaction = {
     date: "Aug 12"
 }
 
-
 describe('<App />', () => {
   it('renders transaction card component', async () => {
     const tree = renderer.create(<TransactionCard name={mockTransaction.name} cost={mockTransaction.cost} description={mockTransaction.description} date={mockTransaction.date} />).toJSON();

@@ -1,36 +1,15 @@
-import React from "react";
+import {useContext} from "react";
 import { Text, View, ScrollView, SafeAreaView } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import TransactionCard from "../../components/transactionCard";
+import { AppContext } from "../../context/appContext";
 
-const DATA = [
-  {
-    name: "test",
-    cost: "-$420",
-    description: "testing",
-    date: "Aug 12",
-  },
-  {
-    name: "test",
-    cost: "-$420",
-    description: "testing",
-    date: "Aug 12",
-  },
-  {
-    name: "test",
-    cost: "-$420",
-    description: "testing",
-    date: "Aug 12",
-  },
-  {
-    name: "test",
-    cost: "-$420",
-    description: "testing",
-    date: "Aug 12",
-  },
-];
+
 
 export default function HomeScreen() {
+  const {transactions, setTransactions} = useContext(AppContext);
+  console.log(transactions);
+  
   const userInformation = () => {
     return (
       <View className="flex-1 flex-row items-center max-h-16">
@@ -79,9 +58,10 @@ export default function HomeScreen() {
         <Text className="text-xl mb-5 font-bold">Recent Transactions</Text>
         <View className="mb-5">
           <Text className="mb-5">Today</Text>
-          {DATA.map((item) => {
+          {transactions.map((item) => {
             return (
               <TransactionCard
+                key={item.id}
                 name={item.name}
                 cost={item.cost}
                 description={item.description}
@@ -92,9 +72,10 @@ export default function HomeScreen() {
         </View>
         <View>
           <Text className="mb-5">Yesterday</Text>
-          {DATA.map((item) => {
+          {transactions.map((item) => {
             return (
               <TransactionCard
+                key={item.id}
                 name={item.name}
                 cost={item.cost}
                 description={item.description}
