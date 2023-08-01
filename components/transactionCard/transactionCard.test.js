@@ -14,12 +14,12 @@ const mockTransaction = {
     date: "Aug 12"
 }
 
-describe('<App />', () => {
-  it('renders transaction card component', async () => {
+describe('<TransactionCard />', () => {
+  it('should render transaction card component', async () => {
     const tree = renderer.create(<TransactionCard name={mockTransaction.name} cost={mockTransaction.cost} description={mockTransaction.description} date={mockTransaction.date} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
-  it('renders transaction name', async () => {
+  it('should render transaction name', async () => {
     render(<TransactionCard name={mockTransaction.name} cost={mockTransaction.cost} description={mockTransaction.description} date={mockTransaction.date} />)
     expect(screen.getByText(mockTransaction.name)).toBeDefined()
   });

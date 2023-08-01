@@ -21,14 +21,47 @@ export default function App() {
   return (
     <AppContextProvider>
       <NavigationContainer>
-        <Tab.Navigator>
+      <Tab.Navigator
+          screenOptions={({ route }) => ({
+            tabBarIcon: ({ focused, color, size }) => {
+              let iconName;
+
+              if (route.name === "Home") {
+                iconName = focused ? "home" : "home-outline";
+              } else if (route.name === "Expense") {
+                iconName = focused ? "ios-list-box" : "ios-list";
+              }
+
+              switch (route.name) {
+                case "Home":
+                  iconName = focused ? "home" : "home-outline";
+                  break;
+                case "Expense":
+                  iconName = focused ? "stats-chart" : "stats-chart-outline";
+                  break;
+                case "Add Transaction":
+                  iconName = focused ? "add-circle" : "add-circle-outline";
+                  size = 42;
+
+                default:
+                  break;
+              }
+
+              // You can return any component that you like here!
+              return <Ionicons name={iconName} size={size} color={color} />;
+            },
+            tabBarActiveTintColor: "tomato",
+            tabBarInactiveTintColor: "gray",
+            tabBarShowLabel: false,
+          })}
+        >
           <Tab.Screen
             name="Home"
             component={HomeScreen}
             options={{ headerShown: false }}
           />
-          <Tab.Screen name="Expense" component={ExpenseScreen} />
           <Tab.Screen name="Add Transaction" component={TransactionScreen} />
+          <Tab.Screen name="Expense" component={ExpenseScreen} />
         </Tab.Navigator>
       </NavigationContainer>
     </AppContextProvider>
