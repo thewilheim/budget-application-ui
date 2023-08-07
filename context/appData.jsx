@@ -2,21 +2,28 @@ import { useContext } from "react";
 import { AppContext } from "./appContext";
 
 export const useAppData = () => {
-    const {transactionsContext, categoriesContext} = useContext(AppContext)
+    const {transactionContext} = useContext(AppContext)
+    const [transactions, setTransactions] = transactionContext;
 
-    const [transactions, setTransactions] = transactionsContext;
-    const [categories, setCategories] = categoriesContext;
-
-    const saveTransactions = (transaction) => {
-        if(!transaction){
-            console.error("Error: no transaction passed");
+    const saveTransactions = async (transaction) => {
+        try {
+            const response = await fetch('http://localhost:3000/transactions', {
+                method: 'POST',
+                headers: {
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify(transaction),
+            })
+            
+            if(response.ok){
+                setTransactions(prevState => [...prevState, transaction])
+            }
+        } catch (error) {
+            console.log(error);
         }
-        setTransactions(prevState => [...prevState, transaction])
     }
     return{
             saveTransactions,
-            setCategories,
             transactions,
-            categories
         }
 }

@@ -2,13 +2,12 @@ import {useContext} from "react";
 import { Text, View, ScrollView, SafeAreaView } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import TransactionCard from "../../components/transactionCard";
-import { AppContext } from "../../context/appContext";
+import { useAppData } from "../../context/appData";
 
 
 
 export default function HomeScreen() {
-  const {transactions, setTransactions} = useContext(AppContext);
-  console.log(transactions);
+  const {transactions} = useAppData()
   
   const userInformation = () => {
     return (

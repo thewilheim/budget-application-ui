@@ -14,8 +14,9 @@ const AppContextProvider = ({children}) => {
     useEffect(() => {
       fetchTransactions()
     },[])
+
       return(
-        <AppContext.Provider value={{transactions, setTransactions}}>
+        <AppContext.Provider value={{transactionContext: [transactions, setTransactions]}}>
             {children}
         </AppContext.Provider>
       )
