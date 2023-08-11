@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Text, View } from "react-native";
+import { Text, View, Button, Pressable } from "react-native";
 import TransactionCard from "./components/transactionCard";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
@@ -52,12 +52,12 @@ const AppTabStack = () => {
         tabBarActiveTintColor: "tomato",
         tabBarInactiveTintColor: "gray",
         tabBarShowLabel: false,
+        headerShown: false
       })}
     >
       <Tab.Screen
         name="Home"
         component={HomeScreen}
-        options={{ headerShown: false }}
       />
       <Tab.Screen
         name="Add Transaction"
@@ -69,7 +69,14 @@ const AppTabStack = () => {
           },
         })}
       />
-      <Tab.Screen name="Expense" component={ExpenseScreen} />
+      <Tab.Screen name="Expense" component={ExpenseScreen} options={{headerStyle: {
+            backgroundColor: '#F8F9FA',
+          },
+          headerShadowVisible: false,
+          headerShown: true,
+          headerTitleAlign: "left",
+          
+      }} />
     </Tab.Navigator>
   );
 };

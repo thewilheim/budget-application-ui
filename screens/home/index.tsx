@@ -1,13 +1,16 @@
 import {useContext} from "react";
+import * as React from "react";
 import { Text, View, ScrollView, SafeAreaView } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import TransactionCard from "../../components/transactionCard";
 import { useAppData } from "../../context/appData";
+import moment from "moment";
 
 
 
 export default function HomeScreen() {
   const {transactions} = useAppData()
+  const todaysTransactions = transactions.filter(item => moment(item.date,'DD-MM-YYYY').isSame(moment(new Date(), 'DD-MM-YYYY')))
   
   const userInformation = () => {
     return (

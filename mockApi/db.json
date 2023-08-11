@@ -5,21 +5,21 @@
       "name": "Mushroom - Chanterelle Frozen",
       "cost": "$4.30",
       "description": "Idiopathic aseptic",
-      "date": "12/04/2023"
+      "date": "07/08/2023"
     },
     {
       "id": 2,
       "name": "Soup - Cream Of Broccoli",
       "cost": "$2.29",
       "description": "Unsp dislocation",
-      "date": "16/07/2022"
+      "date": "08/08/2023"
     },
     {
       "id": 3,
       "name": "Bread Fig And Almond",
       "cost": "$9.83",
       "description": "Displ transverse",
-      "date": "21/12/2022"
+      "date": "10/08/2023"
     },
     {
       "id": 4,
@@ -136,9 +136,25 @@
       "name": "Useless Text",
       "cost": "Useless Text",
       "description": "Useless Text",
-      "date": "11/02/2021",
+      "date": "04/08/2023",
       "category": "Useless Text",
       "id": 20
+    },
+    {
+      "name": "Useless Text",
+      "cost": "Useless Text",
+      "description": "Useless Text",
+      "date": "02/08/2023",
+      "category": "Useless Text",
+      "id": 21
+    },
+    {
+      "name": "Useless Text",
+      "cost": "Useless Text",
+      "description": "Useless Text",
+      "date": "01/08/2023",
+      "category": "Useless Text",
+      "id": 23
     }
   ]
 }
